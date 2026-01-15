@@ -1,26 +1,206 @@
 @import "tailwindcss";
 
+/* CSS Custom Properties - Vous Church Inspired */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-100: #F5F5F5;
+  --color-neutral-200: #E5E5E5;
+  --color-neutral-300: #D4D4D4;
+  --color-neutral-400: #A5A3A6;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  /* Accent - Warm Taupe */
+  --color-accent-light: #C4B7A6;
+  --color-accent: #A89888;
+  --color-accent-dark: #8C7B6A;
+
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Outlined Text Stroke Widths */
+  --stroke-thin: 1px;
+  --stroke-default: 1.5px;
+  --stroke-thick: 2px;
+
+  /* Background */
+  --background: var(--color-black);
+  --foreground: var(--color-white);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-serif: var(--font-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography Classes */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* ============================================
+   OUTLINED TEXT EFFECT - Vous Church Signature
+   ============================================ */
+.text-outlined {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: var(--stroke-default);
+  -webkit-text-stroke-color: currentColor;
+  paint-order: stroke fill;
+}
+
+.text-outlined-white {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: var(--stroke-default);
+  -webkit-text-stroke-color: var(--color-white);
+}
+
+.text-outlined-black {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: var(--stroke-default);
+  -webkit-text-stroke-color: var(--color-black);
+}
+
+/* Outlined text with fill on hover */
+.text-outlined-fill-hover {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: var(--stroke-default);
+  -webkit-text-stroke-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+.text-outlined-fill-hover:hover {
+  -webkit-text-fill-color: currentColor;
+  -webkit-text-stroke-width: 0;
+}
+
+/* Responsive stroke width - thinner on mobile */
+@media (max-width: 768px) {
+  :root {
+    --stroke-default: 1px;
+    --stroke-thick: 1.5px;
+  }
+}
+
+/* ============================================
+   SCROLLBAR STYLES
+   ============================================ */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for body */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-600);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-500);
+}
+
+/* ============================================
+   SELECTION STYLES
+   ============================================ */
+::selection {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* ============================================
+   FOCUS STYLES
+   ============================================ */
+*:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+.will-transform {
+  will-change: transform;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================
+   GLASS EFFECT
+   ============================================ */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-neutral-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
