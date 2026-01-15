@@ -19,7 +19,7 @@ export function CarouselCard({
   return (
     <Link href={href} className="block flex-shrink-0">
       <motion.div
-        className="w-[300px] sm:w-[340px] md:w-[380px] p-6 sm:p-8 glass rounded-sm group cursor-pointer"
+        className="w-[260px] sm:w-[300px] md:w-[340px] lg:w-[380px] p-5 sm:p-6 md:p-8 glass rounded-sm group cursor-pointer"
         whileHover={{ y: -4 }}
         transition={{ duration: 0.3 }}
       >

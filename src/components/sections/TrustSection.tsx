@@ -46,7 +46,7 @@ function AnimatedCounter({
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="font-heading font-bold text-5xl sm:text-6xl md:text-7xl text-white">
+    <span ref={ref} className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">
       {decimals > 0 ? count.toFixed(decimals) : Math.floor(count)}
       {suffix}
     </span>
@@ -68,7 +68,7 @@ export function TrustSection() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}

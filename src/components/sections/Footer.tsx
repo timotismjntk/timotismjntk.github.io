@@ -29,7 +29,7 @@ export function Footer() {
       {/* Footer Links */}
       <div className="border-t border-white/5">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
             {/* Logo & Description */}
             <div className="lg:col-span-2">
               <Link href="/" className="inline-block">
@@ -43,7 +43,7 @@ export function Footer() {
               <div className="mt-6 space-y-2">
                 <a
                   href="mailto:info@thesocialtech.net"
-                  className="text-white/70 hover:text-white transition-colors block"
+                  className="text-white/70 hover:text-[var(--color-purple)] transition-colors block"
                 >
                   info@thesocialtech.net
                 </a>

@@ -45,7 +45,7 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="p-8 sm:p-10 glass rounded-sm group"
+                className="p-5 sm:p-6 md:p-8 glass rounded-sm group"
               >
                 <span className="text-white/20 font-heading font-bold text-5xl block mb-4">
                   {service.number}

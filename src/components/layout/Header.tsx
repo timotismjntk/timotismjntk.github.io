@@ -62,7 +62,7 @@ export function Header() {
                 className="text-white/70 hover:text-white transition-colors font-medium text-sm uppercase tracking-[0.15em] relative group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[var(--color-purple)] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
             <Button variant="outline" size="sm" href="/contact">

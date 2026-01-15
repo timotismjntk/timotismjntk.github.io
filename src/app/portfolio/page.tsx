@@ -86,7 +86,7 @@ export default function PortfolioPage() {
                   </div>
 
                   {/* Results */}
-                  <div className="grid grid-cols-3 gap-6 p-6 glass rounded-sm">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-6 glass rounded-sm">
                     <div className="text-center">
                       <div className="text-white font-heading font-bold text-2xl sm:text-3xl">
                         {project.results.traffic}

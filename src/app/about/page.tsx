@@ -117,7 +117,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="p-8 glass rounded-sm"
+                className="p-5 sm:p-6 md:p-8 glass rounded-sm"
               >
                 <h3 className="font-heading font-bold text-xl text-white mb-3">
                   {value.title}
@@ -132,14 +132,14 @@ export default function AboutPage() {
       {/* Stats Section */}
       <section className="py-20 sm:py-24 bg-neutral-950">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="font-heading font-bold text-5xl text-white">50+</div>
+              <div className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-white">50+</div>
               <div className="text-white/50 text-sm uppercase tracking-wider mt-2">
                 Clients Served
               </div>
@@ -151,7 +151,7 @@ export default function AboutPage() {
               transition={{ delay: 0.1 }}
               className="text-center"
             >
-              <div className="font-heading font-bold text-5xl text-white">5.0</div>
+              <div className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-white">5.0</div>
               <div className="text-white/50 text-sm uppercase tracking-wider mt-2">
                 Google Rating
               </div>
@@ -163,7 +163,7 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="text-center"
             >
-              <div className="font-heading font-bold text-5xl text-white">3x</div>
+              <div className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-white">3x</div>
               <div className="text-white/50 text-sm uppercase tracking-wider mt-2">
                 Avg. ROI
               </div>
@@ -175,7 +175,7 @@ export default function AboutPage() {
               transition={{ delay: 0.3 }}
               className="text-center"
             >
-              <div className="font-heading font-bold text-5xl text-white">100%</div>
+              <div className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-white">100%</div>
               <div className="text-white/50 text-sm uppercase tracking-wider mt-2">
                 Client Retention
               </div>

@@ -134,10 +134,10 @@ export function HeroSection() {
       <ScrollIndicator />
 
       {/* Corner decorations */}
-      <div className="absolute top-8 left-8 w-16 h-16 border-l border-t border-white/10" />
-      <div className="absolute top-8 right-8 w-16 h-16 border-r border-t border-white/10" />
-      <div className="absolute bottom-8 left-8 w-16 h-16 border-l border-b border-white/10" />
-      <div className="absolute bottom-8 right-8 w-16 h-16 border-r border-b border-white/10" />
+      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-l border-t border-white/10" />
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-r border-t border-white/10" />
+      <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-l border-b border-white/10" />
+      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-r border-b border-white/10" />
     </section>
   );
 }

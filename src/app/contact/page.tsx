@@ -65,7 +65,7 @@ export default function ContactPage() {
       {/* Contact Form & Info */}
       <section className="py-20 sm:py-24 bg-neutral-950">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -113,7 +113,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black border border-white/10 text-white placeholder-white/30 focus:border-white/30 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-black border border-white/10 text-white placeholder-white/30 focus:border-[var(--color-purple)] focus:outline-none transition-colors"
                       placeholder="Your name"
                     />
                   </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black border border-white/10 text-white placeholder-white/30 focus:border-white/30 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-black border border-white/10 text-white placeholder-white/30 focus:border-[var(--color-purple)] focus:outline-none transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black border border-white/10 text-white placeholder-white/30 focus:border-white/30 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-black border border-white/10 text-white placeholder-white/30 focus:border-[var(--color-purple)] focus:outline-none transition-colors"
                       placeholder="Your company"
                     />
                   </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-black border border-white/10 text-white placeholder-white/30 focus:border-white/30 focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-black border border-white/10 text-white placeholder-white/30 focus:border-[var(--color-purple)] focus:outline-none transition-colors resize-none"
                       placeholder="Tell us about your project..."
                     />
                   </div>
@@ -194,7 +194,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-12"
+              className="space-y-8 sm:space-y-12"
             >
               <div>
                 <h3 className="font-heading font-bold text-xl text-white mb-4">

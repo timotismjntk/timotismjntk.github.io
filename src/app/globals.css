@@ -21,6 +21,11 @@
   --color-accent: #A89888;
   --color-accent-dark: #8C7B6A;
 
+  /* Purple Accent */
+  --color-purple: #cf94fc;
+  --color-purple-light: #e0b8ff;
+  --color-purple-dark: #a66de0;
+
   /* Typography */
   --font-heading: 'Montserrat', sans-serif;
   --font-serif: 'Instrument Serif', serif;
@@ -51,6 +56,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -145,14 +151,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-neutral-500);
+  background: var(--color-purple);
 }
 
 /* ============================================
    SELECTION STYLES
    ============================================ */
 ::selection {
-  background-color: var(--color-white);
+  background-color: var(--color-purple);
   color: var(--color-black);
 }
 
@@ -160,7 +166,7 @@ body {
    FOCUS STYLES
    ============================================ */
 *:focus-visible {
-  outline: 2px solid var(--color-white);
+  outline: 2px solid var(--color-purple);
   outline-offset: 2px;
 }
 
