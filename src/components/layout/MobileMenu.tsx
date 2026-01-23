@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { navLinks, socialLinks } from '@/data/navigation';
+import { navLinks } from '@/data/navigation';
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -65,7 +65,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
       {/* Logo */}
       <div className="absolute top-6 left-6">
         <span className="font-heading font-bold text-2xl text-white tracking-tight">
-          SoTech
+          {"<Timotius />"}
         </span>
       </div>
 
@@ -88,65 +88,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             </Link>
           </motion.div>
         ))}
-
-        {/* CTA Button */}
-        <motion.div
-          custom={navLinks.length}
-          variants={linkVariants}
-          initial="closed"
-          animate="open"
-          className="mt-8"
-        >
-          <Link
-            href="/contact"
-            onClick={onClose}
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium uppercase tracking-[0.15em] text-sm hover:bg-white hover:text-black transition-all"
-          >
-            Get Started
-            <svg
-              className="w-4 h-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 12h14M12 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
-        </motion.div>
       </nav>
-
-      {/* Bottom Info */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        className="absolute bottom-8 left-0 right-0 px-6"
-      >
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center sm:text-left">
-            <p className="text-white/80 text-sm">info@thesocialtech.net</p>
-            <p className="text-white/50 text-xs mt-1">Houston, TX</p>
-          </div>
-          <div className="flex gap-6">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/50 hover:text-white transition-colors text-sm uppercase tracking-wider"
-              >
-                {social.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </motion.div>
     </motion.div>
   );
 }

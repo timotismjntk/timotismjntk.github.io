@@ -11,14 +11,6 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 sm:pt-40 sm:pb-24 bg-black">
         <div className="container mx-auto px-6 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-white/50 text-sm uppercase tracking-[0.3em] mb-6"
-          >
-            Our Work
-          </motion.p>
           <OutlinedText as="h1" size="2xl" variant="white">
             Portfolio
           </OutlinedText>
@@ -28,7 +20,7 @@ export default function PortfolioPage() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-white/60 mt-6 max-w-2xl mx-auto text-lg"
           >
-            Real results for real businesses. See how we&apos;ve helped Houston companies transform their digital presence.
+            I built applications using <span className="font-bold text-white">React Native</span> framework.
           </motion.p>
         </div>
       </section>
@@ -70,68 +62,34 @@ export default function PortfolioPage() {
                     {project.title}
                   </h2>
                   <p className="text-white/60 text-lg mb-6 leading-relaxed">
-                    {project.longDescription}
+                    {project.description}
                   </p>
 
-                  {/* Services Used */}
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {project.services.map((service) => (
-                      <span
-                        key={service}
-                        className="px-3 py-1 text-xs uppercase tracking-wider text-white/50 border border-white/10 rounded-sm"
-                      >
-                        {service}
-                      </span>
-                    ))}
-                  </div>
-
                   {/* Results */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-6 glass rounded-sm">
-                    <div className="text-center">
-                      <div className="text-white font-heading font-bold text-2xl sm:text-3xl">
-                        {project.results.traffic}
+                  <div className="flex gap-6 sm:gap-8 mb-8">
+                    <div>
+                      <div className="text-white font-heading font-bold text-2xl">
+                        {project.results.ulasan}
                       </div>
                       <div className="text-white/40 text-xs uppercase tracking-wider mt-1">
-                        Traffic
+                        Rate
                       </div>
                     </div>
-                    <div className="text-center">
-                      <div className="text-white font-heading font-bold text-2xl sm:text-3xl">
-                        {project.results.leads}
+                    <div>
+                      <div className="text-white font-heading font-bold text-2xl">
+                        {project.results.download}
                       </div>
                       <div className="text-white/40 text-xs uppercase tracking-wider mt-1">
-                        Leads
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-white font-heading font-bold text-2xl sm:text-3xl">
-                        {project.results.conversion}
-                      </div>
-                      <div className="text-white/40 text-xs uppercase tracking-wider mt-1">
-                        Conversion
+                        Download
                       </div>
                     </div>
                   </div>
+                  <Button variant="outline" size="md" href={project.url} withArrow>
+                    View Apps
+                  </Button>
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 sm:py-24 bg-black text-center">
-        <div className="container mx-auto px-6">
-          <OutlinedText as="h2" size="xl" variant="white">
-            Your Project Could Be Next
-          </OutlinedText>
-          <p className="text-white/50 mt-4 max-w-xl mx-auto">
-            Let&apos;s create something amazing together.
-          </p>
-          <div className="mt-10">
-            <Button variant="primary" size="lg" href="/contact" withArrow>
-              Start Your Project
-            </Button>
           </div>
         </div>
       </section>

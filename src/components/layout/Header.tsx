@@ -49,7 +49,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="relative z-10 group">
             <span className="font-heading font-bold text-2xl text-white tracking-tight transition-opacity group-hover:opacity-80">
-              SoTech
+              {"<Timotius />"}
             </span>
           </Link>
 
@@ -65,9 +65,6 @@ export function Header() {
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-[var(--color-purple)] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
-            <Button variant="outline" size="sm" href="/contact">
-              Get Started
-            </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}

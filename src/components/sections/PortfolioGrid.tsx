@@ -35,15 +35,15 @@ export function PortfolioGrid() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 sm:py-24 lg:py-32 bg-black">
+    <section ref={sectionRef} className="py-20 sm:py-24 lg:py-32 bg-black" id="portfolio">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <OutlinedText as="h2" size="xl" variant="white">
-            Our Work
+            Portfolio
           </OutlinedText>
           <p className="text-white/50 mt-4 max-w-2xl mx-auto">
-            Real results for Houston businesses. See how we&apos;ve helped our clients grow.
+            I built applications using <span className="font-bold text-white">React Native</span> framework.
           </p>
         </div>
 
@@ -89,43 +89,28 @@ export function PortfolioGrid() {
                 <div className="flex gap-6 sm:gap-8 mb-8">
                   <div>
                     <div className="text-white font-heading font-bold text-2xl">
-                      {project.results.traffic}
+                      {project.results.ulasan}
                     </div>
                     <div className="text-white/40 text-xs uppercase tracking-wider mt-1">
-                      Traffic
+                      Rate
                     </div>
                   </div>
                   <div>
                     <div className="text-white font-heading font-bold text-2xl">
-                      {project.results.leads}
+                      {project.results.download}
                     </div>
                     <div className="text-white/40 text-xs uppercase tracking-wider mt-1">
-                      Leads
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-white font-heading font-bold text-2xl">
-                      {project.results.conversion}
-                    </div>
-                    <div className="text-white/40 text-xs uppercase tracking-wider mt-1">
-                      Conversion
+                      Download
                     </div>
                   </div>
                 </div>
 
-                <Button variant="outline" size="md" href={`/portfolio#${project.id}`} withArrow>
-                  View Case Study
+                <Button variant="outline" size="md" href={project.url} withArrow>
+                  View Apps
                 </Button>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* View All Button */}
-        <div className="text-center mt-16 sm:mt-20">
-          <Button variant="primary" size="lg" href="/portfolio" withArrow>
-            View All Projects
-          </Button>
         </div>
       </div>
     </section>

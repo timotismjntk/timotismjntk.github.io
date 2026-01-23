@@ -28,36 +28,19 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: 'SoTech | Bridge the Social & Digital',
-    template: '%s | SoTech',
+    default: 'Timotius Simanjuntak - Senior Mobile App Engineer',
+    template: '%s | Timotius',
   },
   description:
-    "Houston's premier marketing technology partner. We help businesses grow through strategic websites, SEO, paid advertising, and marketing automation.",
+    "A senior Mobile App Engineer based in Indonesia. Feel free to explore my work below.",
   keywords: [
-    'Houston marketing agency',
-    'web development Houston',
-    'SEO Houston',
-    'digital marketing Houston',
-    'SoTech',
-    'marketing automation',
-    'CRM Houston',
-    'paid advertising',
+    'React Native',
+    'Android App Development',
+    'Ios App Development',
+    'Mobile App Development',
   ],
-  authors: [{ name: 'SoTech' }],
-  creator: 'SoTech',
-  openGraph: {
-    title: 'SoTech | Bridge the Social & Digital',
-    description: "Houston's premier marketing technology partner.",
-    url: 'https://thesocialtech.net',
-    siteName: 'SoTech',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'SoTech | Bridge the Social & Digital',
-    description: "Houston's premier marketing technology partner.",
-  },
+  authors: [{ name: 'Timotius Simanjuntak' }],
+  creator: 'Timotius Simanjuntak',
   robots: {
     index: true,
     follow: true,

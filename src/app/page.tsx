@@ -1,15 +1,17 @@
 import { HeroSection } from '@/components/sections/HeroSection';
-import { ServicesCarousel } from '@/components/sections/ServicesCarousel';
-import { TrustSection } from '@/components/sections/TrustSection';
 import { PortfolioGrid } from '@/components/sections/PortfolioGrid';
+import { WorkSection } from '@/components/sections/WorkSection';
+import { EducationSection } from '@/components/sections/Education';
+import { ContactSection } from '@/components/sections/ContactSection';
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ServicesCarousel />
-      <TrustSection />
+      <WorkSection />
+      <EducationSection />
       <PortfolioGrid />
+      <ContactSection />
     </>
   );
 }
