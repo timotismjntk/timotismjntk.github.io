@@ -6,9 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // GitHub Pages tidak mendukung optimasi gambar otomatis Next.js
   },
-  // Jika URL kamu adalah username.github.io/nama-repo/, 
-  // ganti 'nama-repo' di bawah ini:
-  basePath: '/timotismjntk.github.io',
+  basePath: '',
 };
 
 export default nextConfig;
