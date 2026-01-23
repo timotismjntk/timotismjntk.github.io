@@ -1,10 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { OutlinedText } from '../typography/OutlinedText';
-import { Button } from '../ui/Button';
-import { footerLinks, socialLinks } from '@/data/navigation';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
